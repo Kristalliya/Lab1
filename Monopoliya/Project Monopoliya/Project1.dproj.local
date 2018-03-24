@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.652,=C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.175,=C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.571,C:\Users\Kristal Sink\Desktop\Монополия\Unit1.dfm=C:\Users\Kristal Sink\Desktop\Монополия\UI\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.198,=C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.920,=C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.007,C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas=C:\Users\Kristal Sink\Desktop\Монополия\Domain\UDie.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.554,C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas=C:\Users\Kristal Sink\Desktop\Монополия\Domain\UBoard.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.962,C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas=C:\Users\Kristal Sink\Desktop\Монополия\Domain\USquare.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.359,C:\Users\Kristal Sink\Desktop\Монополия\Unit2.pas=C:\Users\Kristal Sink\Desktop\Монополия\Domain\UPiece.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.571,C:\Users\Kristal Sink\Desktop\Монополия\Unit1.pas=C:\Users\Kristal Sink\Desktop\Монополия\UI\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.039,C:\Users\Kristal Sink\Desktop\Монополия\Project1.dproj=C:\Users\Kristal Sink\Desktop\Монополия\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.364,C:\Users\Kristal Sink\Desktop\Монополия\Project1.dproj=C:\Users\Kristal Sink\Desktop\Монополия\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.792,C:\Users\Kristal Sink\Desktop\Монополия\Project1.dproj=C:\Users\Kristal Sink\Desktop\Монополия\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.433,C:\Users\Kristal Sink\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\Kristal Sink\Desktop\Монополия\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.104,=C:\Users\Kristal Sink\Desktop\Монополия\Domain\UPlayer.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.586,=C:\Users\Kristal Sink\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.491,C:\Users\Kristal Sink\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Kristal Sink\Desktop\Монополия\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.086,=C:\Users\Kristal Sink\Desktop\Монополия\Domain\UMonopolyGame.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.433,C:\Users\Kristal Sink\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\Kristal Sink\Desktop\Монополия\Unit1.pas</Transaction>
+    <Transaction>2018.03.23 21:35:20.962,C:\Users\Kristal Sink\Desktop\Монополия Ol\Project1.dproj=C:\Users\Kristal Sink\Desktop\Монополия Ol\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

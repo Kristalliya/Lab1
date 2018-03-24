@@ -1,0 +1,35 @@
+unit UDie;
+
+interface
+
+type
+  TDie=class
+private
+  faceValue:Integer;
+const MAX=6;
+public
+  function Die;
+  procedure roll;
+  function getFaceValue:integer;
+  end;
+
+implementation
+
+{ TDie }
+
+function TDie.Die;
+begin
+  roll;
+end;
+
+procedure TDie.getFaceValue;
+begin
+  result:=faceValue;
+end;
+
+procedure TDie.roll;
+begin
+  //faceValue=(int)((math.random()*MAX)+1);
+end;
+
+end.

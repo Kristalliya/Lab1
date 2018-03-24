@@ -1,0 +1,82 @@
+unit UBoard;
+
+interface
+uses SysUtils, Generics.Collections, Generics.Defaults,USquare;
+type TBoard=class
+const  SIZE=40;
+  private
+    squares:TList<TSquare>; //
+  public
+    function getSquare(start:TSquare; distance:integer):TSquare;
+    function getStartSquare:TSquare;
+    procedure buildsquares;
+    procedure build(i:integer);
+    procedure linksquares;
+    procedure link(i:integer);
+  published
+    constructor create;
+end;
+
+implementation
+
+{ TBoard }
+
+
+procedure TBoard.buildsquares;
+var
+  i: Integer;
+begin
+  squares:=TList<TSquare>.Create;
+  for i := 0 to size-1 do
+    build(i);
+end;
+
+constructor TBoard.create;
+begin
+  buildSquares;
+  linkSquares;
+end;
+
+procedure TBoard.build(i: integer);
+var
+  s:TSquare;
+begin
+  s:=TSquare.Create('Square'+inttostr(i),i);
+  squares.add(s);
+end;
+
+
+
+function TBoard.getSquare(start: TSquare; distance: integer): TSquare;
+var endIndex:integer;
+begin
+  endIndex:=(start.getIndex+distance);
+  result:=squares.Items[endIndex];
+end;
+
+function TBoard.getStartSquare: TSquare;
+begin
+  result:=squares.First;
+end;
+
+procedure TBoard.link(i: integer);
+var
+  current,next:TSquare;
+begin
+  current:=squares.items[i];
+  next:=squares.items[i+1];
+  current.setNextSquare(next);
+end;
+
+procedure TBoard.linksquares;
+var i:integer;
+first,last:TSquare;
+begin
+  for i := 0 to (size-1) do
+    link(i);
+  first:=squares.first;
+  last:=squares.last;
+  last.setNextSquare(first);
+end;
+
+end.

@@ -1,0 +1,34 @@
+unit UDie;
+
+interface
+
+type
+  TDie=class
+private
+  faceValue:Integer;
+public
+  function Die:TDie;
+  procedure roll;
+  function getFaceValue:integer;
+  end;
+
+implementation
+
+{ TDie }
+
+function TDie.Die: TDie;
+begin
+  roll;
+end;
+
+procedure TDie.getFaceValue;
+begin
+  result:=faceValue;
+end;
+
+procedure TDie.roll;
+begin
+
+end;
+
+end.

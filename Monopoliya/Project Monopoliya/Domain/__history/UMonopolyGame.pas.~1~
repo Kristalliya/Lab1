@@ -1,0 +1,10 @@
+unit UMonopolyGame;
+
+interface
+type
+  TMonopolyGame = class
+
+  end;
+implementation
+
+end.

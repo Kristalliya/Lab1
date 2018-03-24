@@ -1,0 +1,59 @@
+unit UMonopolyGame;
+
+interface
+uses UDie,UBoard,sysUtils, Generics.Collections, Generics.Defaults,UPlayer;
+const
+  rounds_total=20;
+  players_total=2;
+type
+  TMonopolyGame = class
+private
+  players:Tlist<Players_total>;
+  board:TBoard;
+  dice:array of TDie;
+public
+  procedure MonopolyGame;
+  procedure PlayGame;
+  function getPlayers:Tlist<TPlayer>;
+  procedure playRound;
+
+  end;
+implementation
+
+{ TMonopolyGame }
+
+function TMonopolyGame.getPlayers: Tlist<TPlayer>;
+begin
+  result:=players;
+end;
+
+procedure TMonopolyGame.MonopolyGame;
+var p:TPlayer;
+begin
+  p:=Tplayer.create('Лошадь', dice,board);
+  players.add(p);
+  p:=TPlayer.create('Автомобиль',dice,board);
+  players.add(p);
+end;
+
+procedure TMonopolyGame.PlayGame;
+var
+  i: Integer;
+begin
+  for i := 0 to rounds_total do
+  begin
+    playround;
+    inc(i);
+  end;
+end;
+
+procedure TMonopolyGame.playRound;
+var
+  iter:iterator;
+
+begin
+  for I := Low to High do
+
+end;
+
+end.
