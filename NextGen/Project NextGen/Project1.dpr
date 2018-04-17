@@ -11,7 +11,8 @@ uses
   USalesLineItem in 'Domain\USalesLineItem.pas',
   USale in 'Domain\USale.pas',
   URegister in 'Domain\URegister.pas',
-  UStore in 'Domain\UStore.pas';
+  UStore in 'Domain\UStore.pas',
+  UConnect in 'src\UConnect.pas';
 
 {$R *.res}
 
