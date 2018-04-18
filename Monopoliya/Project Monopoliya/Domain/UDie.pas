@@ -3,16 +3,21 @@ unit UDie;
 interface
 
 type
-  TDie=class
-const MAX=6;
-private
-  faceValue:Integer;
+  IDie = class
+    procedure roll;virtual;abstract;
+    function getFaceValue: Integer;virtual;abstract;
+  end;
 
-public
-  procedure roll;
-  function getFaceValue:integer;
-published
-constructor create;
+  TDie = class(IDie)
+  const
+    MAX = 6;
+  private
+    faceValue: Integer;
+  public
+    procedure roll;override;
+    function getFaceValue: Integer;override;
+  published
+    constructor create;
   end;
 
 implementation

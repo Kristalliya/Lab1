@@ -12,7 +12,10 @@ uses
   USale in 'Domain\USale.pas',
   URegister in 'Domain\URegister.pas',
   UStore in 'Domain\UStore.pas',
-  UConnect in 'src\UConnect.pas';
+  UConnect in 'src\UConnect.pas',
+  UITax in 'Domain\UITax.pas',
+  UITax1 in 'src\UITax1.pas',
+  UITax2 in 'src\UITax2.pas';
 
 {$R *.res}
 

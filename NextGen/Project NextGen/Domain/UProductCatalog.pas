@@ -4,15 +4,21 @@ interface
 uses
   ItemID,Money,UProductDescription,sysUtils,Generics.Collections,Generics.Defaults;
 type
-  TProductCatalog=class
-private
-  description:TDictionary<TItemID, TProductDescription>;
-published
-  constructor create;
-public
-  Procedure ProductCatalog;
-  function getProductDescription(id:TItemID):TProductDescription;
+  IProductCatalog = class
+    Procedure ProductCatalog;virtual;abstract;
+    function getProductDescription(id: TItemID): TProductDescription;virtual;abstract;
   end;
+
+  TProductCatalog = class(IProductCatalog)
+  private
+    description: TDictionary<TItemID, TProductDescription>;
+  published
+    constructor create;
+  public
+    Procedure ProductCatalog;override;
+    function getProductDescription(id: TItemID): TProductDescription;override;
+  end;
+
 implementation
 
 { TProductCatalog }
