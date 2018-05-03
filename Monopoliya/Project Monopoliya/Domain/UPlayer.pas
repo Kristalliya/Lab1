@@ -47,15 +47,15 @@ var rollTotal,i:integer;
 newLoc:TSquare;
 begin
   rollTotal:=0;
-  for  i:= 0 to dice.Count-1 do
+  {for  i:= 0 to dice.Count-1 do
   begin
     dice.Items[i].roll;
     rollTotal:=rollTotal+self.dice.items[i].getFaceValue;
   end;
   newLoc:=board.getSquare(piece.getLocation, rollTotal);
+  piece.setLocation(newLoc); }
+  newLoc := board.getSquare(piece.getLocation, rollTotal);
   piece.setLocation(newLoc);
-
-
 end;
 
 end.

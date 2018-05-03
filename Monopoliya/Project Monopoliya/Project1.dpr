@@ -11,7 +11,8 @@ uses
   UPlayer in 'Domain\UPlayer.pas',
   UMonopolyGame in 'Domain\UMonopolyGame.pas',
   Unit2 in 'UI\Unit2.pas' {Form2},
-  Unit1 in 'UI\Unit1.pas' {Form1};
+  Unit1 in 'UI\Unit1.pas' {Form1},
+  UCup in 'Domain\UCup.pas';
 
 {$R *.res}
 
