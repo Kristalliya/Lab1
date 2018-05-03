@@ -82,10 +82,6 @@
 			<DelphiCompile Include="$(MainSource)">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
-			<DCCReference Include="UI\Unit1.pas">
-				<Form>Form1</Form>
-				<FormType>dfm</FormType>
-			</DCCReference>
 			<DCCReference Include="Domain\UPayment.pas"/>
 			<DCCReference Include="src\Money.pas"/>
 			<DCCReference Include="Domain\UProductCatalog.pas"/>
@@ -97,17 +93,23 @@
 			<DCCReference Include="Domain\UStore.pas"/>
 			<DCCReference Include="src\UConnect.pas"/>
 			<DCCReference Include="src\UTaxLineItems.pas"/>
-			<DCCReference Include="Domain\UITaxCalculatorAdapter.pas"/>
-			<DCCReference Include="Domain\UTaxMasterAdapter.pas"/>
-			<DCCReference Include="Domain\UGoodAsGoldTaxProAdapter.pas"/>
+			<DCCReference Include="Domain\Polymorth\UITaxCalculatorAdapter.pas"/>
+			<DCCReference Include="Domain\Polymorth\UTaxMasterAdapter.pas"/>
+			<DCCReference Include="Domain\Polymorth\UGoodAsGoldTaxProAdapter.pas"/>
 			<DCCReference Include="UI\Unit2.pas">
 				<Form>Form2</Form>
 				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="UI\Unit1.pas">
+				<Form>Form1</Form>
 			</DCCReference>
 			<DCCReference Include="UI\Unit3.pas">
 				<Form>Form3</Form>
 				<FormType>dfm</FormType>
 			</DCCReference>
+			<DCCReference Include="Domain\Strategy\UAbsoluteDiscountPricingStrategy.pas"/>
+			<DCCReference Include="Domain\Strategy\UISalePricingStrategy.pas"/>
+			<DCCReference Include="Domain\Strategy\UPercentDiscountPricingStrategy.pas"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

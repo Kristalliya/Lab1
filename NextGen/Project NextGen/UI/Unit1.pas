@@ -18,6 +18,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     Register1:TRegister1;
     catalog:TProductCatalog;
@@ -47,13 +48,22 @@ procedure TForm1.Button2Click(Sender: TObject);
 begin
  Form3.Show;
  Form3.Edit1.Text := IntToStr(Register1.getTotalSale);
-  close;//
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   catalog:=TProductCatalog.create;
   register1:=TRegister1.create(catalog);
+  Register1.makeNewSale;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+  Edit1.Text:='0';
+  Edit2.Text:='0';
+  catalog:=TProductCatalog.create;
+  Register1:=TRegister1.create(catalog);
+  Register1.makeNewSale;
 end;
 
 end.

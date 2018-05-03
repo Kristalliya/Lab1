@@ -2,8 +2,8 @@ object Form3: TForm3
   Left = 0
   Top = 0
   Caption = 'Form3'
-  ClientHeight = 242
-  ClientWidth = 527
+  ClientHeight = 85
+  ClientWidth = 473
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,8 +14,8 @@ object Form3: TForm3
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 0
-    Top = 57
+    Left = 32
+    Top = 41
     Width = 98
     Height = 17
     Caption = #1048#1090#1086#1075#1086' '#1082' '#1086#1087#1083#1072#1090#1077':'
@@ -27,15 +27,15 @@ object Form3: TForm3
     ParentFont = False
   end
   object Edit1: TEdit
-    Left = 104
-    Top = 56
+    Left = 136
+    Top = 40
     Width = 121
     Height = 21
     TabOrder = 0
   end
   object Button1: TButton
-    Left = 231
-    Top = 54
+    Left = 263
+    Top = 38
     Width = 186
     Height = 25
     Caption = #1047#1072#1082#1088#1099#1090#1100

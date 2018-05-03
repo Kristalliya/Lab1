@@ -3,7 +3,7 @@ unit UStore;
 interface
 uses UProductCatalog, URegister;
 type
-  IStore = interface
+  IStore = class
     function getRegister: TRegister1;virtual;abstract;
   end;
 

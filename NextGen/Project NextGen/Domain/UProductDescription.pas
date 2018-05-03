@@ -8,7 +8,7 @@ type
   IProductDescription = class
     Procedure ProductDescription(id: TItemID; price: TMoney;
       description: string);virtual;abstract;
-    function getid: TItemID;virtual;abstract;
+    function getItemId: TItemID;virtual;abstract;
     function getPrice: TMoney;virtual;abstract;
     function getDescription: string;virtual;abstract;
   end;
@@ -21,7 +21,7 @@ type
   public
     Procedure ProductDescription(id: TItemID; price: TMoney;
       description: String);override;
-    function getid: TItemID;override;
+    function getItemid: TItemID;override;
     function getPrice: TMoney;override;
     function getDescription: string;override;
   end;
@@ -35,7 +35,7 @@ begin
   result:=description;
 end;
 
-function TProductDescription.getId: TItemID;
+function TProductDescription.getItemId: TItemID;
 begin
   result:=id;
 end;

@@ -2,7 +2,6 @@ program Project1;
 
 uses
   Vcl.Forms,
-  Unit1 in 'UI\Unit1.pas' {Form1},
   UPayment in 'Domain\UPayment.pas',
   Money in 'src\Money.pas',
   UProductCatalog in 'Domain\UProductCatalog.pas',
@@ -14,11 +13,15 @@ uses
   UStore in 'Domain\UStore.pas',
   UConnect in 'src\UConnect.pas',
   UTaxLineItems in 'src\UTaxLineItems.pas',
-  UITaxCalculatorAdapter in 'Domain\UITaxCalculatorAdapter.pas',
-  UTaxMasterAdapter in 'Domain\UTaxMasterAdapter.pas',
-  UGoodAsGoldTaxProAdapter in 'Domain\UGoodAsGoldTaxProAdapter.pas',
+  UITaxCalculatorAdapter in 'Domain\Polymorth\UITaxCalculatorAdapter.pas',
+  UTaxMasterAdapter in 'Domain\Polymorth\UTaxMasterAdapter.pas',
+  UGoodAsGoldTaxProAdapter in 'Domain\Polymorth\UGoodAsGoldTaxProAdapter.pas',
   Unit2 in 'UI\Unit2.pas' {Form2},
-  Unit3 in 'UI\Unit3.pas' {Form3};
+  Unit1 in 'UI\Unit1.pas' {Form1},
+  Unit3 in 'UI\Unit3.pas' {Form3},
+  UAbsoluteDiscountPricingStrategy in 'Domain\Strategy\UAbsoluteDiscountPricingStrategy.pas',
+  UISalePricingStrategy in 'Domain\Strategy\UISalePricingStrategy.pas',
+  UPercentDiscountPricingStrategy in 'Domain\Strategy\UPercentDiscountPricingStrategy.pas';
 
 {$R *.res}
 
