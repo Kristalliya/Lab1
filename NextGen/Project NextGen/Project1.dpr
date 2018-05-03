@@ -11,7 +11,12 @@ uses
   USalesLineItem in 'Domain\USalesLineItem.pas',
   USale in 'Domain\USale.pas',
   URegister in 'Domain\URegister.pas',
-  UStore in 'Domain\UStore.pas';
+  UStore in 'Domain\UStore.pas',
+  UConnect in 'src\UConnect.pas',
+  UTaxLineItems in 'src\UTaxLineItems.pas',
+  UITaxCalculatorAdapter in 'Domain\UITaxCalculatorAdapter.pas',
+  UTaxMasterAdapter in 'Domain\UTaxMasterAdapter.pas',
+  UGoodAsGoldTaxProAdapter in 'Domain\UGoodAsGoldTaxProAdapter.pas';
 
 {$R *.res}
 

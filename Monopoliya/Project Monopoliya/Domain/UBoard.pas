@@ -53,7 +53,8 @@ function TBoard.getSquare(start: TSquare; distance: integer): TSquare;
 var
   endIndex: integer;
 begin
-  endIndex := (start.getIndex + distance);
+  endIndex := ((start.getIndex + distance)mod 40);
+  if endIndex=0 then endIndex:=1;
   result := squares.Items[endIndex];
 end;
 

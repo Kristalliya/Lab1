@@ -1,0 +1,1 @@
+Provider=MSDASQL.1;Password=1234;Persist Security Info=True;User ID=user;Extended Properties="Driver=MySQL ODBC 5.3 ANSI Driver;SERVER=localhost;UID=user;PWD=1234;DATABASE=shop;PORT=3306";Initial Catalog=shop

@@ -26,6 +26,7 @@ constructor TPlayer.create(name: string; dice: TDie; board: TBoard);
 begin
   self.name:=name;
   self.dice:=TList<TDie>.Create;
+  self.dice.Add(dice);
  // self.dice.Add(dice);  self.dice.Add(dice);
   self.board:=board;
   piece:=TPiece.create(board.getStartSquare)
