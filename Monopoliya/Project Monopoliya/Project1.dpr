@@ -12,7 +12,10 @@ uses
   UMonopolyGame in 'Domain\UMonopolyGame.pas',
   Unit2 in 'UI\Unit2.pas' {Form2},
   Unit1 in 'UI\Unit1.pas' {Form1},
-  UCup in 'Domain\UCup.pas';
+  UCup in 'Domain\UCup.pas',
+  UGoSquare in 'Domain\Polymorth\UGoSquare.pas',
+  UIncomeTaxSquare in 'Domain\Polymorth\UIncomeTaxSquare.pas',
+  URegularSquare in 'Domain\Polymorth\URegularSquare.pas';
 
 {$R *.res}
 

@@ -2,6 +2,7 @@ unit UPiece;
 
 interface
 uses USquare;
+
 type
   IPiece = class
     function getLocation: TSquare;virtual;abstract;
