@@ -3,19 +3,26 @@ unit UPlayer;
 interface
 uses UPiece,UBoard,UDie,USquare,sysUtils,generics.collections,generics.defaults,classes;
 type
-  TPlayer = class
-private
-  name:string;
-  piece:TPiece;
-  board:TBoard;
-  dice:TList<TDie>;
-published
-  constructor create(name:string; dice:TDie; board:TBoard);
-public
-  procedure takeTurn;
-  function getLocation:TSquare;
-  function getName:string;
+  IPlayer = class
+    procedure takeTurn;virtual;abstract;
+    function getLocation: TSquare;virtual;abstract;
+    function getName: string;virtual;abstract;
   end;
+
+  TPlayer = class(IPlayer)
+  private
+    name: string;
+    piece: TPiece;
+    board: TBoard;
+    dice: TList<TDie>;
+  published
+    constructor create(name: string; dice: TDie; board: TBoard);
+  public
+    procedure takeTurn;override;
+    function getLocation: TSquare;override;
+    function getName: string;override;
+  end;
+
 implementation
 
 { TPlayer }

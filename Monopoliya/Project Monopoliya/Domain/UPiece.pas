@@ -3,15 +3,21 @@ unit UPiece;
 interface
 uses USquare;
 type
-  TPiece=class
-private
-  location:TSquare;
-published
-  constructor create(location:TSquare);
-public
-  function getLocation:TSquare;
-  procedure setlocation(location:TSquare);
+  IPiece = class
+    function getLocation: TSquare;virtual;abstract;
+    procedure setlocation(location: TSquare);virtual;abstract;
   end;
+
+  TPiece = class(IPiece)
+  private
+    location: TSquare;
+  published
+    constructor create(location: TSquare);
+  public
+    function getLocation: TSquare;override;
+    procedure setlocation(location: TSquare);override;
+  end;
+
 implementation
 
 { TPiece }

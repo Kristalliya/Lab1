@@ -3,10 +3,15 @@ unit UCup;
 interface
 uses UDie,SysUtils, Generics.Collections,Generics.Defaults;
 type
-  TCup = class
-  public
-    function getTotal(var dice:TList<TDie>): integer;
+  ICup = class
+    function getTotal(var dice: TList<TDie>): integer;virtual;abstract;
   end;
+
+  TCup = class(ICup)
+  public
+    function getTotal(var dice: TList<TDie>): integer;override;
+  end;
+
 implementation
 
 { TCup }
