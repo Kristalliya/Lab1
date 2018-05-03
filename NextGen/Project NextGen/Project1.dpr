@@ -13,16 +13,12 @@ uses
   URegister in 'Domain\URegister.pas',
   UStore in 'Domain\UStore.pas',
   UConnect in 'src\UConnect.pas',
-<<<<<<< HEAD
   UTaxLineItems in 'src\UTaxLineItems.pas',
   UITaxCalculatorAdapter in 'Domain\UITaxCalculatorAdapter.pas',
   UTaxMasterAdapter in 'Domain\UTaxMasterAdapter.pas',
-  UGoodAsGoldTaxProAdapter in 'Domain\UGoodAsGoldTaxProAdapter.pas';
-=======
-  UITax in 'Domain\UITax.pas',
-  UITax1 in 'src\UITax1.pas',
-  UITax2 in 'src\UITax2.pas';
->>>>>>> 38a89c0887edaa1283a4ce93eecacca97d3159ac
+  UGoodAsGoldTaxProAdapter in 'Domain\UGoodAsGoldTaxProAdapter.pas',
+  Unit2 in 'UI\Unit2.pas' {Form2},
+  Unit3 in 'UI\Unit3.pas' {Form3};
 
 {$R *.res}
 
@@ -30,5 +26,7 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.

@@ -4,19 +4,14 @@ interface
 uses
   UProductDescription,Money;
 type
-  ISalesLineItem = class
-    procedure SalesLineItem(desc: TProductDescription; quantity: integer);virtual;abstract;
-    function getSubTotal: TMoney;virtual;abstract;
-  end;
-
-  TSalesLineItem = class(ISalesLineItem)
-  private
-    quantity: integer;
-    description: TProductDescription;
-  public
-    procedure SalesLineItem(desc: TProductDescription; quantity: integer);override;
-    function getSubTotal: TMoney;override;
-  end;
+  TSalesLineItem=class
+private
+  quantity:integer;
+  description:TProductDescription;
+public
+  procedure SalesLineItem(desc:TProductDescription; quantity:integer);
+  function getSubTotal:TMoney;
+end;
 
 implementation
 

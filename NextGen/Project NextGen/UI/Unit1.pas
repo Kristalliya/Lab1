@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, URegister, UProductCatalog,
-  Data.DB, Data.Win.ADODB;
+  Data.DB, Data.Win.ADODB, Unit3;
 
 type
   TForm1 = class(TForm)
@@ -19,7 +19,7 @@ type
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
-    Register:TRegister;
+    Register1:TRegister1;
     catalog:TProductCatalog;
     { Private declarations }
   public
@@ -36,21 +36,24 @@ implementation
 procedure TForm1.Button1Click(Sender: TObject);
 var id:integer; qty:integer;
 begin
-  id:=strtoint(Edit1.text);
-  qty:=strToInt(Edit2.Text);
-  Register.makeNewSale;
-  Register.enterItem(id,qty);
+  id:=StrToInt(Edit1.Text);
+  qty:=StrToInt(Edit2.Text);
+  Register1.enterItem(id,qty);
+  Edit1.Text:='0';
+  Edit2.Text:='0';
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
 begin
-//
+ Form3.Show;
+ Form3.Edit1.Text := IntToStr(Register1.getTotalSale);
+  close;//
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   catalog:=TProductCatalog.create;
-  register:=TRegister.create(catalog);
+  register1:=TRegister1.create(catalog);
 end;
 
 end.
