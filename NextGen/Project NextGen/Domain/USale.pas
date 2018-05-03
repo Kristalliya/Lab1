@@ -3,10 +3,19 @@ unit USale;
 interface
 
 uses Money, UPayment, UProductDescription, USalesLineItem, SysUtils,
-  Generics.Collections, Generics.Defaults;
+  Generics.Collections, Generics.Defaults, UITax, UITax1, UITax2;
 
 type
-  TSale = class
+  ISale = class
+    function getBalance: TMoney;virtual;abstract;
+    procedure becomeComplete;virtual;abstract;
+    function isComplete: Boolean;virtual;abstract;
+    procedure makeLineItem(desc: TProductDescription; quantity: integer);virtual;abstract;
+    function getTotal: TMoney;virtual;abstract;
+    procedure makePayment(cashTendered: TMoney);virtual;abstract;
+  end;
+
+  TSale = class(ISale)
   private
     lineItems: Tlist<TSalesLineItem>;
     Date: TDate;
@@ -15,13 +24,12 @@ type
   published
     constructor create;
   public
-    function getBalance: TMoney;
-    procedure becomeComplete;
-    function isComplete: Boolean;
-    procedure makeLineItem(desc: TProductDescription; quantity: integer);
-    function getTotal: TMoney;
-    procedure makePayment(cashTendered: TMoney);
-
+    function getBalance: TMoney;override;
+    procedure becomeComplete;override;
+    function isComplete: Boolean;override;
+    procedure makeLineItem(desc: TProductDescription; quantity: integer);override;
+    function getTotal: TMoney;override;
+    procedure makePayment(cashTendered: TMoney);override;
   end;
 
 implementation
@@ -47,6 +55,7 @@ end;
 
 function TSale.getTotal: TMoney;
 var
+  itax:UITax;// iTax:TITax
   total, Subtotal: TMoney;
   SalesLineItem: TSalesLineItem;
 begin
@@ -57,6 +66,7 @@ begin
     subTotal:=SalesLineItem.getSubTotal;
     total:=total+subtotal;
   end;
+  result:=result-iTax;
   result:=total;
 end;
 

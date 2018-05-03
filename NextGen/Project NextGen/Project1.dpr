@@ -13,10 +13,16 @@ uses
   URegister in 'Domain\URegister.pas',
   UStore in 'Domain\UStore.pas',
   UConnect in 'src\UConnect.pas',
+<<<<<<< HEAD
   UTaxLineItems in 'src\UTaxLineItems.pas',
   UITaxCalculatorAdapter in 'Domain\UITaxCalculatorAdapter.pas',
   UTaxMasterAdapter in 'Domain\UTaxMasterAdapter.pas',
   UGoodAsGoldTaxProAdapter in 'Domain\UGoodAsGoldTaxProAdapter.pas';
+=======
+  UITax in 'Domain\UITax.pas',
+  UITax1 in 'src\UITax1.pas',
+  UITax2 in 'src\UITax2.pas';
+>>>>>>> 38a89c0887edaa1283a4ce93eecacca97d3159ac
 
 {$R *.res}
 

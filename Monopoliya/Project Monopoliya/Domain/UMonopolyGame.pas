@@ -5,7 +5,13 @@ interface
 uses UDie, UBoard, sysUtils, Generics.Collections, Generics.Defaults, Classes, UPlayer;
 
 type
-  TMonopolyGame = class
+  IMonopolyGame = class
+    procedure PlayGame;virtual;abstract;
+    function getPlayers: Tlist<TPlayer>;virtual;abstract;
+    procedure playRound;virtual;abstract;
+  end;
+
+  TMonopolyGame = class(IMonopolyGame)
   const
     rounds_total = 20;
     players_total = 2;
@@ -14,9 +20,9 @@ type
     board: TBoard;
     dice: TDie;
   public
-    procedure PlayGame;
-    function getPlayers: Tlist<TPlayer>;
-    procedure playRound;
+    procedure PlayGame;override;
+    function getPlayers: Tlist<TPlayer>;override;
+    procedure playRound;override;
   published
     constructor create;
   end;

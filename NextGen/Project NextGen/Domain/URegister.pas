@@ -5,17 +5,24 @@ interface
 uses UProductCatalog,USale,UProductDescription, Money, ItemID;
 
 type
-  TRegister = class
+  IRegister = class
+    procedure endSale;virtual;abstract;
+    procedure enterItem(id: TItemID; quantity: integer);virtual;abstract;
+    procedure makeNewSale;virtual;abstract;
+    procedure makePayment(cashTendered: TMoney);virtual;abstract;
+  end;
+
+  TRegister = class(IRegister)
   private
     catalog: TProductCatalog;
-    currentSale:TSale;
+    currentSale: TSale;
   published
-    constructor create(catalog:TProductCatalog);
+    constructor create(catalog: TProductCatalog);
   public
-    procedure endSale;
-    procedure enterItem(id:TItemID;quantity:integer);
-    procedure makeNewSale;
-    procedure makePayment(cashTendered:TMoney);
+    procedure endSale;override;
+    procedure enterItem(id: TItemID; quantity: integer);override;
+    procedure makeNewSale;override;
+    procedure makePayment(cashTendered: TMoney);override;
   end;
 
 implementation
