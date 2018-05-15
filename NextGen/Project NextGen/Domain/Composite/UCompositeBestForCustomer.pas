@@ -1,4 +1,4 @@
-﻿ï»¿unit UCompositeBestForCustomer;
+﻿unit UCompositeBestForCustomer;
 
 interface
 
