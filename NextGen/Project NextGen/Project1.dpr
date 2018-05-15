@@ -28,7 +28,10 @@ uses
   UIInventoryAdapter in 'Domain\Polymorth\UIInventoryAdapter.pas',
   UICreditAuthorizationServiceAdapter in 'Domain\Polymorth\UICreditAuthorizationServiceAdapter.pas',
   UIAccountingAdapter in 'Domain\Polymorth\UIAccountingAdapter.pas',
-  UGreatNorthernAccountingAdapter in 'Domain\Polymorth\UGreatNorthernAccountingAdapter.pas';
+  UGreatNorthernAccountingAdapter in 'Domain\Polymorth\UGreatNorthernAccountingAdapter.pas',
+  UCompositeBestForCustomer in 'Domain\Composite\UCompositeBestForCustomer.pas',
+  UCompositeBestForStore in 'Domain\Composite\UCompositeBestForStore.pas',
+  UCompositePricingStrategy in 'Domain\Composite\UCompositePricingStrategy.pas';
 
 {$R *.res}
 
