@@ -31,7 +31,8 @@ uses
   UGreatNorthernAccountingAdapter in 'Domain\Polymorth\UGreatNorthernAccountingAdapter.pas',
   UCompositeBestForCustomer in 'Domain\Composite\UCompositeBestForCustomer.pas',
   UCompositeBestForStore in 'Domain\Composite\UCompositeBestForStore.pas',
-  UCompositePricingStrategy in 'Domain\Composite\UCompositePricingStrategy.pas';
+  UCompositePricingStrategy in 'Domain\Composite\UCompositePricingStrategy.pas',
+  UPersistentStorage in 'src\UPersistentStorage.pas';
 
 {$R *.res}
 
