@@ -110,6 +110,13 @@
 			<DCCReference Include="Domain\Strategy\UAbsoluteDiscountPricingStrategy.pas"/>
 			<DCCReference Include="Domain\Strategy\UISalePricingStrategy.pas"/>
 			<DCCReference Include="Domain\Strategy\UPercentDiscountPricingStrategy.pas"/>
+			<DCCReference Include="Domain\UServicesFactory.pas"/>
+			<DCCReference Include="Domain\UPricingStrategyFactory.pas"/>
+			<DCCReference Include="Domain\Polymorth\USAPAccountingAdapter.pas"/>
+			<DCCReference Include="Domain\Polymorth\UIInventoryAdapter.pas"/>
+			<DCCReference Include="Domain\Polymorth\UICreditAuthorizationServiceAdapter.pas"/>
+			<DCCReference Include="Domain\Polymorth\UIAccountingAdapter.pas"/>
+			<DCCReference Include="Domain\Polymorth\UGreatNorthernAccountingAdapter.pas"/>
 			<BuildConfiguration Include="Release">
 				<Key>Cfg_2</Key>
 				<CfgParent>Base</CfgParent>

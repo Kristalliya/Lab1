@@ -21,7 +21,14 @@ uses
   Unit3 in 'UI\Unit3.pas' {Form3},
   UAbsoluteDiscountPricingStrategy in 'Domain\Strategy\UAbsoluteDiscountPricingStrategy.pas',
   UISalePricingStrategy in 'Domain\Strategy\UISalePricingStrategy.pas',
-  UPercentDiscountPricingStrategy in 'Domain\Strategy\UPercentDiscountPricingStrategy.pas';
+  UPercentDiscountPricingStrategy in 'Domain\Strategy\UPercentDiscountPricingStrategy.pas',
+  UServicesFactory in 'Domain\UServicesFactory.pas',
+  UPricingStrategyFactory in 'Domain\UPricingStrategyFactory.pas',
+  USAPAccountingAdapter in 'Domain\Polymorth\USAPAccountingAdapter.pas',
+  UIInventoryAdapter in 'Domain\Polymorth\UIInventoryAdapter.pas',
+  UICreditAuthorizationServiceAdapter in 'Domain\Polymorth\UICreditAuthorizationServiceAdapter.pas',
+  UIAccountingAdapter in 'Domain\Polymorth\UIAccountingAdapter.pas',
+  UGreatNorthernAccountingAdapter in 'Domain\Polymorth\UGreatNorthernAccountingAdapter.pas';
 
 {$R *.res}
 
